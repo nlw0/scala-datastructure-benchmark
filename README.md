@@ -4,6 +4,10 @@ scala-datastructure-benchmark
 A simple benchmark to estimate the speed difference of using mutable and immutable Maps as counters.
 
 ## Methodology
+Microbenchmarks are controversial. But we want to see their results anyway, right?
+
+We have two tests here in this project, one using (Caliper)[https://github.com/google/caliper], and 
+
 This is not an extremely careful benchmark, but it employs some techniques to try to make it as fair as possible for a _simple_ benchmark. Basically we run the different methods one after the other a number of times and look at the statistics of the running times. A lot of the code here was [adapted from another test](https://github.com/nlw0/scala-json-benchmark) to compare JSON parsing libraries.
 
 We tested three different counter update methods. We used a mutable map, an immutable map generated from a foldleft straight from the input data, and a `var` containing an immutable map.
