@@ -61,3 +61,5 @@ Caliper showed similar results, at most ~40% faster for mutable.
 <tr><td>   1M</td><td>  675.88</td><td> 1004.84</td><td> 1100.15</td></tr> 
 <tr><td>   5M</td><td> 5347.58</td><td> 7383.24</td><td> 7608.36</td></tr> 
 </table>
+
+![cool graphic](http://i.imgur.com/Ydn6qt7.png)
