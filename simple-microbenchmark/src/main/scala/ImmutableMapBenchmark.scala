@@ -46,7 +46,7 @@ class MutableTester extends MapTester {
     genData(n) foreach { s =>
       acc(s) = acc.getOrElse(s, 0) + 1
     }
-    acc.values.min
+    acc.values.take(3).min
   }
 }
 
@@ -56,7 +56,7 @@ class ImmutableVarTester extends MapTester {
     genData(n) foreach { s =>
       acc = acc + (s -> (acc.getOrElse(s, 0) + 1))
     }
-    acc.values.min
+    acc.values.take(3).min
   }
 }
 
@@ -65,6 +65,6 @@ class ImmutableFoldTester extends MapTester {
     val acc = genData(n).foldLeft(Map.empty[String, Int]) { (a, str) =>
       a + (str -> (1 + a.getOrElse(str, 0)))
     }
-    acc.values.min
+    acc.values.take(3).min
   }
 }
