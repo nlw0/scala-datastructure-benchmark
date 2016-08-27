@@ -10,6 +10,8 @@ We have two tests here in this project, one using [Caliper](https://github.com/g
 
 We tested three different counter update methods. We used a mutable map, an immutable map generated from a foldleft straight from the input data, and a `var` containing an immutable map.
 
+Further tests also show mutable map can be about 4 times faster for integer keys. 
+
 ## Not Caliper
 
 At each test run we generated different sets of random strings. Each string had 6 characters from 'a' to 'e'. That means we generated at most 5<sup>6</sup> = 15,625 different elements. We tested the methods one after the other, 11 times for each different input data size of 10k, 100k, 1M and 10M strings. In the first two cases the minimum count found at the maps was 1, while in the other the values were close to 35 and 540.
